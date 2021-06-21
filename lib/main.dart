@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sevenapps/ui/screens/home_screen.dart';
+import 'package:sevenapps/ui/res/pallet.dart';
+import 'package:sevenapps/ui/screens/landing/landing_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,11 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Seven Apps',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: HomeScreen(),
+          primaryColor: Pallet.primaryColor,
+          accentColor: Pallet.accentColor,
+          primarySwatch: Colors.deepOrange),
+      home: LandingScreen(),
     );
   }
 }
